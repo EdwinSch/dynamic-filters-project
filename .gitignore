@@ -1,0 +1,17 @@
+# Global ignore
+*.sketch
+*.fig
+*.xd
+
+# Folders and files
+node_modules/
+/temp_styles.css
+
+# Docs
+/README.md
+
+# Specific
+.DS_Store
+.prettierignore
+
+
