@@ -4,7 +4,7 @@ const productsContainer = document.querySelector(".products-container");
 
 /* ---- FUNCTIONS ---- */
 
-// Display Products Function
+// --- Display Products Function
 function displayProducts() {
   // conditional for empty search results
   if (filteredProducts.length < 1) {
@@ -31,7 +31,7 @@ function displayProducts() {
 //invoke function
 displayProducts();
 
-// Text Filter
+// --- Text Filter
 const form = document.querySelector(".input-form");
 const searchInput = document.querySelector(".search-input");
 
@@ -45,7 +45,7 @@ form.addEventListener("keyup", function () {
   displayProducts();
 });
 
-// Display Filter Buttons dynamically
+// --- Display Filter Buttons dynamically
 const searchBtnsContainer = document.querySelector(".search-buttons");
 
 function displayButtons() {
@@ -59,3 +59,20 @@ function displayButtons() {
 }
 //invoke function
 displayButtons();
+
+// --- Filter Buttons function
+searchBtnsContainer.addEventListener("click", function (event) {
+  const btnElement = event.target;
+
+  if (btnElement.dataset.id === "all") {
+    filteredProducts = [...products];
+  } else {
+    filteredProducts = products.filter((product) => {
+      return product.type === btnElement.dataset.id;
+    });
+  }
+  // reset search input field
+  searchInput.value = "";
+  // re-invoke display products function (new state)
+  displayProducts();
+});
