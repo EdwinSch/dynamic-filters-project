@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filters</title>
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/x-icon" href="#" />
     <!-- Icons -->
     <link
@@ -16,10 +16,45 @@
       referrerpolicy="no-referrer"
     />
     <!-- JS -->
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="./products.js" defer></script>
   </head>
 
   <body>
-    <h1>Hello World</h1>
+    <main>
+      <!-- filters aside -->
+      <div class="filters-container">
+        <form class="input-form">
+          <input
+            type="text"
+            class="search-input"
+            name="search-input"
+            placeholder="search"
+          />
+        </form>
+        <h5>Search by type</h5>
+        <div class="search-buttons">
+          <button class="type-btn">beds</button>
+          <button class="type-btn">chairs</button>
+          <button class="type-btn">sofas</button>
+          <button class="type-btn">storage</button>
+          <button class="type-btn">tables</button>
+        </div>
+      </div>
+      <!-- products overview -->
+      <div class="products-container">
+        <article class="product">
+          <img
+            class="product-img img"
+            src="https://dl.airtable.com/.attachments/14ac9e946e1a02eb9ce7d632c83f742f/4fd98e64/product-1.jpeg"
+            alt="product"
+          />
+          <footer>
+            <h5 class="product-name">bench</h5>
+            <span class="product-price">&euro; 20.99</span>
+          </footer>
+        </article>
+      </div>
+    </main>
   </body>
 </html>

@@ -11,3 +11,80 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #f8fafc;
 }
+main {
+  border: solid red 1px;
+  width: 100vw;
+  display: flex;
+  gap: 1rem;
+  /* display: grid;
+  grid-gap: 1rem; */
+  margin: 20px auto;
+  max-width: 1120px;
+}
+
+/* ASIDE */
+
+h5 {
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background: #e2e8f0;
+  border-radius: 0.25rem;
+  border-color: transparent;
+  letter-spacing: 1px;
+}
+.type-btn {
+  display: block;
+  margin: 0.25em 0;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  background: transparent;
+  border-color: transparent;
+  letter-spacing: 1px;
+  color: #64748b;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.type-btn:hover {
+  color: var(--grey-700);
+  transform: translateX(5px);
+}
+/* PRODUCTS */
+.product {
+  margin-bottom: 1rem;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.product-img {
+  border-radius: var(--borderRadius);
+  height: 15rem;
+}
+
+footer {
+  padding: 0.75rem 0;
+  text-align: center;
+}
+.product-name {
+  margin-bottom: 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  color: var(--grey-500);
+}
+.product-price {
+  margin-bottom: 0;
+  color: var(--grey-700);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: var(--letterSpacing);
+}
