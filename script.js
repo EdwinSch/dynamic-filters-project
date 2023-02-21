@@ -6,7 +6,11 @@ const productsContainer = document.querySelector(".products-container");
 
 // Display Products Function
 function displayProducts() {
-  // conditional
+  // conditional for empty search results
+  if (filteredProducts.length < 1) {
+    productsContainer.innerHTML = `<h6>No matching search results.</h6>`;
+    return;
+  }
 
   productsContainer.innerHTML = filteredProducts
     .map(({ id, title, image, price }) => {
