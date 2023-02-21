@@ -44,3 +44,18 @@ form.addEventListener("keyup", function () {
   // re-invoke display products function (new state)
   displayProducts();
 });
+
+// Display Filter Buttons dynamically
+const searchBtnsContainer = document.querySelector(".search-buttons");
+
+function displayButtons() {
+  const buttons = ["all", ...new Set(products.map((product) => product.type))];
+
+  searchBtnsContainer.innerHTML = buttons
+    .map((type) => {
+      return `<button class="type-btn" data-id="${type}">${type}</button>`;
+    })
+    .join("");
+}
+//invoke function
+displayButtons();
